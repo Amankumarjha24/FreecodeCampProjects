@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ans{
+            background-color: yellow;
+            display: inline;
+            padding: 10px;
+            border-radius: 10px;
+            color: red;
+            font-weight: bold;
+            letter-spacing: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>We are going to learn abotu how Math.Random() works</p>
+    <p>The Math.random() method return a pseudo random number grater then or equal to 0 and less then 1 Oho WoW bro is it true lest test bro</p>
+    <p>if you are not able to see what i done if you seeing this page in brower ok so you have to open console Ops my bad you already knows bro</p>
+    <p>Dont worry bro you can also see the random number here when you refferesh it <p id="rnd"></p></p>
+
+    <p>Ops bro it will only generate random no between 0 to 1 what about others hmmmmmm. let's build it together ok!</p>
+    <p>lets assign to variable <strong>min and max and min value is starting point and maximum value would be ending point ok </strong></p>
+    <p>we have to do nothing bro just past it Math.random() * (maximum - minimum) + minimum ok</p>
+    <p><strong>But i know 😉 you all are just like me you all want to know the why behiend of it right?</strong></p>
+    <p style="color: blue;">Ok Ok i will explane it to you! <br><br> so listen -
+    Math.random() will also gives random number which is lies between 0 to 1 which means only floting number (sorry for the spealling) it will never be 1 right? 
+<br> Then why the (maximum - minimum) it is known as range if we want number between 10 to 20 then what would be our range it would be (20-10 = 10) right the range will always be 10 <br>
+ok ok so what is going on ther - look when we write Math.random() * range which is (max - min = 10) then it would be Math.random() * 10; for example if Math.random() gave 0 it will be 0 * 10 = 0 and if <br>
+Math.random() gives 0.99 it will 0.99 * 10 = 9.9 boom we are in the range but but ther are still some issue what about if random vlue is 0 then value will be 0 for now | tha
+s issue removed by + minimum look till now our range is 0 to 9.9 right because of 0 * 10; but + main a game changer look how 
+suppose that random gives this value = 0 * (max - min) is 0 * 10 = 0 but when we add here min it will 0 + 10 = 10 now the range start form 10 right 
+now the value is right if random gives use 0.9 then what happen ? 0.9 * 10 = 9 + 10 = 19 ans is 19 it will always in range betwwen 10 to 20 same ass other value 
+</p>
+<p><strong>(Surprise - we can also use Math.floor() it will do you remove floot part 😁😁😁)</strong></p>The Math.floor() method rounds the value down to the nearest whold integer.</p></p>
+<p>if you want to test then past it in console - <p>const money = 10.99;
+Math.floor(money);</p></p>
+<p>ans will be here - <p id="rnd2"></p></p>
+    
+
+    <script>
+        const randomNumber = Math.random();
+        console.log(randomNumber);
+        const value =  document.querySelector("#rnd");
+        value.setAttribute("class","ans")
+        const value2 = document.querySelector("#rnd2");
+        value2.setAttribute("class","ans")
+        value.innerHTML = randomNumber;
+        const randomNum2 = (20 - 10) *10
+        console.log(randomNum2)
+
+
+    </script>
+</body>
+</html>
