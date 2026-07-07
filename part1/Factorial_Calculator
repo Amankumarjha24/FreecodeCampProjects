@@ -1,0 +1,14 @@
+let num = 5
+
+function factorialCalculator(number) {
+  let ans = 1
+  for(let i = 1; i <= number; i++){
+    ans = ans * i
+  }
+  return ans
+}
+const factorial = factorialCalculator(num)
+console.log(factorial)
+
+let resultMsg = `Factorial of ${num} is ${factorial}`
+console.log(resultMsg)
